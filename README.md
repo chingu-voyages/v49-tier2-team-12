@@ -37,3 +37,4 @@ coding!
 - Parykhan jameel: [GitHub](https://github.com/parykhan-jameel) / [LinkedIn](https://linkedin.com/in/parykhan-jameel)
 - Andrei Olteanu: [GitHub](https://github.com/andreiolteanu555) / [LinkedIn](https://www.linkedin.com/in/andrei-olteanu-9009/)
 - Riry Nomenjanahary: [GitHub](https://github.com/TiaDev7474) / [LinkedIn](https://www.linkedin.com/in/riry-nomenjanahary-a47a85264)
+- Zarrar Hussain Abid: [GitHub](https://github.com/Zarrarabid) / [LinkedIn](https://www.linkedin.com/in/zarrar-abid-a1667121a/)
