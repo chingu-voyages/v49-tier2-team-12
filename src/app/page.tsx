@@ -1,7 +1,9 @@
-import Image from "next/image";
-
+"use client"
+import ColorPicker from "@/components/next-iro/colorPicker"
 export default function Home() {
   return (
-    <main><h1>hello world</h1></main>
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+         <ColorPicker onColorChange={() => {}}/>
+    </main>
   );
 }
