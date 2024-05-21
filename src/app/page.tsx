@@ -1,9 +1,11 @@
-"use client"
-import ColorPicker from "@/components/next-iro/colorPicker"
+import PromptWrapper from "@/app/_components/prompt_wrapper";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-         <ColorPicker onColorChange={() => {}}/>
+    <main className="w-full flex min-h-screen flex-col  justify-between p-24">
+        <div className="w-full">
+            <PromptWrapper />
+        </div>
     </main>
   );
 }
