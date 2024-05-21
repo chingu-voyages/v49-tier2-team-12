@@ -4,7 +4,7 @@ const openai = new OpenAI({
      apiKey: process.env.OPENAI_API_KEY
 });
 
-const system_message = "You are a helpful assistant that suggestion best colors recommendations that follow color theory according context and color selected and output json object as response like this format {\n" +
+const system_message = "You are a helpful assistant that suggest best colors recommendations that follow color theory according context and color selected and always output color recommendation  in json object as response like this format {\n" +
     "   \"selectedColor\": {\n" +
     "        \"name\": \"Blue\",\n" +
     "        \"code\": \"#0000FF\"\n" +
@@ -36,7 +36,7 @@ export async function POST(request: Request) {
      const completion = await openai.chat.completions.create({
           messages: [
               { role: "system", content: system_message },
-               { role: "user", content: prompt }
+              { role: "user", content: prompt }
           ],
           model: "gpt-3.5-turbo",
      });
