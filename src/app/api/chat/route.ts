@@ -41,6 +41,6 @@ export async function POST(request: Request) {
           model: "gpt-3.5-turbo",
 
      });
-     console.log(completion.choices[0]+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++4
+     console.log(completion.choices[0])
      return Response.json({ data: completion.choices[0]})
 }
