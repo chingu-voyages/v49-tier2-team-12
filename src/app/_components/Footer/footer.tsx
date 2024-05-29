@@ -3,7 +3,7 @@ import React from "react";
 import Logo from "../../../../public/Logo.png"
 import Image from 'next/image'
 
-export default function PromptWrapper() {
+export default function Footer() {
 
     return (
         <footer className="p-4 bg-white sm:p-6 dark:bg-gray-800">
