@@ -4,6 +4,9 @@ import Footer from "@/app/_components/Footer/footer";
 import ColorPicker from "@/components/next-iro/colorPicker";
 
 export default function Home() {
+  const handleColorChange = (color: string) =>{
+    console.log("selected color: ",color);
+  }
   return (
     <main className="w-full flex min-h-screen flex-col  justify-between p-24">
         <div className="w-full">
