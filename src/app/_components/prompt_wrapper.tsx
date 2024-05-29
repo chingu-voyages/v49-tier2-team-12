@@ -1,6 +1,7 @@
 "use client"
-import React, { useState } from "react";
+import React , {useContext , useState} from "react";
 import ThreeDotLoader from "@/app/_components/three_dot_loader";
+import {ColorContext} from "@/app/_components/color_context";
 
 export interface IRecommendation {
     selectedColor: SelectedColor;
@@ -16,7 +17,7 @@ export interface SelectedColor {
 export interface CompatibleColor {
     name: string;
     code: string;
-    description?: string; // Assuming description might be added
+    description?: string;
 }
 
 export default function PromptWrapper() {
@@ -24,6 +25,8 @@ export default function PromptWrapper() {
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null);
     const [recommendation, setRecommendation] = useState<IRecommendation | null>(null);
+    const state = useContext(ColorContext);
+
 
     const handleTextareaChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
         setContext(event.target.value);
@@ -40,7 +43,7 @@ export default function PromptWrapper() {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ prompt: context })
+                body: JSON.stringify({ prompt: `Suggest a color recommendation based on the context: ${context}, and the selected color : ${state?.selectedColor}`} )
             });
 
             if (!response.ok) {
@@ -69,8 +72,8 @@ export default function PromptWrapper() {
                     placeholder="Type your message here"
                     onChange={handleTextareaChange}
                 />
-                    <button type="submit" 
-                    className="w-full hover:text-white dark:hover:bg-gray-700 h-12 text-gray-950 bg-yellow-300 py-2 rounded-sm">
+                    <button type="submit"
+                            className="w-full hover:text-white dark:hover:bg-gray-700 h-12 text-gray-950 bg-yellow-300 py-2 rounded-sm">
                         {isLoading ? <ThreeDotLoader /> : 'Ask Ai'}
                     </button>
                     {error && <div className="text-red-600">{error}</div>}
@@ -79,10 +82,10 @@ export default function PromptWrapper() {
 
             {
                 recommendation ?
-                    <div 
+                    <div
                         // className="w-1/2 text-black p-4 border border-gray-300 rounded-sm  shadow-sm"
                         className="w-1/2 text-black hover:text-slate-400 p-4 border border-slate-800 rounded-lg shadow dark:border-gray-700 dark:hover:bg-gray-700"
-                        >
+                    >
                         <h1 className="text-2xl font-bold mb-2">Selected Color</h1>
                         <div className="flex items-center mb-4">
                             <div className="w-12 h-12 rounded-full mr-3" style={{ backgroundColor: recommendation?.selectedColor?.code }}></div>
@@ -108,10 +111,10 @@ export default function PromptWrapper() {
                             }
                         </div>
                     </div> :
-                     <div 
-                    //  className="text-center flex-1 text-gray-500"
-                     className="flex-1 min-h-80 p-3 bg-white text-black hover:text-slate-400 border border-slate-800 rounded-lg shadow dark:border-gray-700 dark:hover:bg-gray-700"
-                     >Responses goes here</div>
+                    <div
+                        className="flex-1 min-h-80 p-3 bg-white text-black hover:text-slate-400 border border-slate-800 rounded-lg shadow dark:border-gray-700 dark:hover:bg-gray-700">
+                        Responses goes here
+                    </div>
             }
         </div>
     )
