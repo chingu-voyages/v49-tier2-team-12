@@ -1,6 +1,7 @@
 "use client"
-import React, { useState } from "react";
+import React , {useContext , useState} from "react";
 import ThreeDotLoader from "@/app/_components/three_dot_loader";
+import {ColorContext} from "@/app/_components/color_context";
 
 export interface IRecommendation {
     selectedColor: SelectedColor;
@@ -24,6 +25,7 @@ export default function PromptWrapper() {
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null);
     const [recommendation, setRecommendation] = useState<IRecommendation | null>(null);
+    const state = useContext(ColorContext);
 
     const handleTextareaChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
         setContext(event.target.value);
@@ -40,7 +42,7 @@ export default function PromptWrapper() {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ prompt: context })
+                body: JSON.stringify({ prompt: `${context}, the selected color is ${state?.selectedColor}`} )
             });
 
             if (!response.ok) {
