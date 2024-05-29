@@ -2,7 +2,7 @@
 
 import React , {createContext , useState} from "react";
 
-type ColorContextType = {
+export type ColorContextType = {
     selectedColor: string | null,
     handleColorSelection: (value: string) => void
 }
