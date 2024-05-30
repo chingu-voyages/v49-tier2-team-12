@@ -29,7 +29,12 @@ const ColorPicker: React.FC = () => {
         };
     }, [state, state?.handleColorSelection]);
 
-    return <div ref={colorPickerRef}></div>;
+    return( 
+        <>
+            <div ref={colorPickerRef}></div>
+            <div>Selected Color: {state?.selectedColor}</div>
+        </>
+);
 };
 
 export default ColorPicker;
