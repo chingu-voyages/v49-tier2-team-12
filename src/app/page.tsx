@@ -15,7 +15,7 @@ export default function Home() {
                   <ColorPicker/>
                   <div className="mb-10">
                     <h2 className="text-gray-700 text-xl">
-                      <span className="bg-green-500 text-white px-2 py-1 rounded-md border border-green-600">Step 2</span> Write the context in which you want to use the selected color.
+                      <span className="bg-green-500 text-white px-2 py-1 rounded-md border border-green-600">Step 2</span> Write the context and explain how you want to use the selected color.
                     </h2>
                   </div>
                   <PromptWrapper />
