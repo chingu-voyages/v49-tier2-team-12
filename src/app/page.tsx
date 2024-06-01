@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className="w-full flex min-h-screen flex-col justify-between">
         <div className="w-full py-20">
-          <div className="max-w-screen-xl mx-auto">
+          <div className="max-w-screen-xl mx-auto p-3">
               <ColorContextProvider>
                   <ColorPicker/>
                   <div className="mb-10">

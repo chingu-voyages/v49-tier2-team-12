@@ -23,7 +23,7 @@ export default function Footer() {
                     </div>
                     <div className="flex text-center flex-col item-center justify-center lg:ms-5 md:my-0 my-3 ">
                         <a className="hover:text-cyan-300	" href="https://www.chingu.io/">
-                            Chigu
+                            Chingu
                         </a>
                         <a className="hover:text-cyan-300	" href="https://github.com/chingu-voyages/v49-tier2-team-12">
                             Voyages V49 Team 12

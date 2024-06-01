@@ -30,8 +30,8 @@ const ColorPicker: React.FC = () => {
     }, [state, state?.handleColorSelection]);
 
     return (
-        <div className="flex pb-20">
-            <div className="w-1/2 flex flex-col items-start justify-center">
+        <div className="flex flex-col lg:flex-row pb-20">
+            <div className="lg:w-1/2 flex flex-col items-start justify-center">
                 <div className="mb-10">
                     <h2 className="text-gray-700 text-xl">
                         <span className="bg-green-500 text-white px-2 py-1 rounded-md border border-green-600">Step 1</span> Pick a color from the wheel or add your own color hexadecimal code
@@ -42,7 +42,7 @@ const ColorPicker: React.FC = () => {
                     <div className="text-3xl text-gray-700 font-medium">{state?.selectedColor}</div>
                 </div>
             </div>
-            <div className="w-1/2 flex items-center justify-center p-4">
+            <div className="lg:w-1/2 flex items-center justify-center p-4">
                 <div ref={colorPickerRef}></div>
             </div>
         </div>
