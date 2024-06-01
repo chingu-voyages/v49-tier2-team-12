@@ -43,7 +43,7 @@ export default function PromptWrapper() {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ prompt: `Suggest a color recommendation based on the context: ${context}, and the selected color : ${state?.selectedColor}`} )
+                body: JSON.stringify({ prompt: `Suggest color recommendations and compatible colors based on the context: ${context}, and the selected color : ${state?.selectedColor}`} )
             });
 
             if (!response.ok) {
