@@ -84,7 +84,7 @@ export default function PromptWrapper() {
                 recommendation ?
                     <div
                         // className="w-1/2 text-black p-4 border border-gray-300 rounded-sm  shadow-sm"
-                        className="w-3/5 text-black hover:text-slate-400 p-4 border border-slate-800 rounded-lg shadow dark:border-gray-700 dark:hover:bg-gray-700"
+                        className="lg:w-3/5 text-black hover:text-slate-400 p-4 border border-slate-800 rounded-lg shadow dark:border-gray-700 dark:hover:bg-gray-700"
                     >
                         <h1 className="text-2xl font-bold mb-2">Selected Color</h1>
                         <div className="flex items-center mb-4">
