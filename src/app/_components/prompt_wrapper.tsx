@@ -86,7 +86,7 @@ export default function PromptWrapper() {
                         // className="w-1/2 text-black p-4 border border-gray-300 rounded-sm  shadow-sm"
                         className="lg:w-3/5 text-black hover:text-slate-400 p-4 border border-slate-800 rounded-lg shadow dark:border-gray-700 dark:hover:bg-gray-700"
                     >
-                        <h1 className="text-2xl font-bold mb-2">Selected Color</h1>
+                        <h1 className="text-2xl font-bold mb-2">Selected Color:</h1>
                         <div className="flex items-center mb-4">
                             <div className="w-12 h-12 rounded-full mr-3" style={{ backgroundColor: recommendation?.selectedColor?.code }}></div>
                             <div>
@@ -95,7 +95,7 @@ export default function PromptWrapper() {
                             </div>
                         </div>
                         <p className="text-lg mb-4"><strong>Context:</strong> {recommendation?.context}</p>
-                        <h2 className="text-xl font-semibold mb-2">Compatible Colors</h2>
+                        <h2 className="text-xl font-semibold mb-2">Color Recommendations:</h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                             {
                                 recommendation?.compatibleColors?.map((color: CompatibleColor) => (
