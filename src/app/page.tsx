@@ -2,6 +2,7 @@ import PromptWrapper from "@/app/_components/prompt_wrapper";
 import ColorContextProvider from "@/app/_components/color_context";
 import Footer from "@/app/_components/Footer/footer";
 import ColorPicker from "@/components/next-iro/colorPicker";
+import ColorVisionSimulator from "@/app/_components/color_vision";
 
 export default function Home() {
   const handleColorChange = (color: string) =>{
@@ -19,6 +20,7 @@ export default function Home() {
                     </h2>
                   </div>
                   <PromptWrapper />
+                  <ColorVisionSimulator />
               </ColorContextProvider>
           </div>
         </div>
