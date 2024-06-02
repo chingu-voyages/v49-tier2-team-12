@@ -2,6 +2,7 @@ import PromptWrapper from "@/app/_components/prompt_wrapper";
 import ColorContextProvider from "@/app/_components/color_context";
 import Footer from "@/app/_components/Footer/footer";
 import ColorPicker from "@/components/next-iro/colorPicker";
+import Header from "./_components/Header/header";
 
 export default function Home() {
   const handleColorChange = (color: string) =>{
@@ -9,6 +10,9 @@ export default function Home() {
   }
   return (
     <main className="w-full flex min-h-screen flex-col justify-between">
+      <div>
+          <Header/>
+      </div>
         <div className="w-full py-20">
           <div className="max-w-screen-xl mx-auto p-3">
               <ColorContextProvider>
