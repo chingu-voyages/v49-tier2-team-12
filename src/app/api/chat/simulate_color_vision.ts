@@ -40,17 +40,14 @@ const system_message2 = "I want you to be an assistant who is able to simulate h
 
 
 export async function POST(request: Request) {
-    const { colorHex } = await request.json(); 
-    const prompt2 = `Hex color code: ${colorHex}`;
-
+    const { colorHex } = await request.json();
     const completion2 = await openai.chat.completions.create({
-         messages: [
-             { role: "system", content: system_message2 },
-             { role: "user", content: prompt2 }
-         ],
-         model: "gpt-3.5-turbo",
-
+        messages: [
+            { role: "system", content: system_message2 },
+            { role: "user", content: `Simulate the color ${colorHex} for different color vision deficiencies.` }
+        ],
+        model: "gpt-3.5-turbo",
     });
-    console.log(completion2.choices[0])
-    return Response.json({ data: completion2.choices[0]})
+    console.log(completion2.choices[0]);
+    return Response.json({ data: completion2.choices[0] });
 }

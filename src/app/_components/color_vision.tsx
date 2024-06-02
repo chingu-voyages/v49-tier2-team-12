@@ -38,7 +38,7 @@ export default function ColorVisionSimulator() {
         setIsLoading(true);
         setError(null);
         try {
-            const response = await fetch('/api/simulate_color_vision', {
+            const response = await fetch('/api/chat/simulate_color_vision', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
