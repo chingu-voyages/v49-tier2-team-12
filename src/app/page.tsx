@@ -5,7 +5,7 @@ import ColorPicker from "@/components/next-iro/colorPicker";
 
 export default function Home() {
   const handleColorChange = (color: string) =>{
-    console.log("selected color: ",color);
+    console.log("selected color: ",handleColorChange);
   }
   return (
     <main className="w-full flex min-h-screen flex-col  justify-between p-24">
