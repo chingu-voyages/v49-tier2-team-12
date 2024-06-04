@@ -56,9 +56,9 @@ const ColorPicker: React.FC = () => {
                     </h2>
                 </div>
                 <div className="flex flex-col items-center justify-center mx-auto rounded-md border-4 border-green-600 p-4">
-                    <div className="text-gray-700 font-bold text-3xl">Selected Color: {" "}</div>
-                    <div className="text-3xl text-gray-700 font-medium border-2 border-black">
-                      <input  type="text" value={hexInput} onChange={handleHexInputChange} >
+                    <div className="text-gray-700 font-bold text-3xl mb-2">Selected Color: {" "}</div>
+                    <div className="text-3xl text-gray-700 font-medium border-2 border-black w-full max-w-xs">
+                      <input  type="text" value={hexInput} onChange={handleHexInputChange} className="w-full text-center" >
                       </input>
                     </div>
                 </div>
