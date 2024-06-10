@@ -53,6 +53,7 @@ export default function PromptWrapper() {
             const data = await response.json();
             const parsedData: IRecommendation = JSON.parse(data.data.message.content);
             setRecommendation(parsedData);
+            localStorage.setItem("history",JSON.stringify({context:context , selectedColor: state?.selectedColor}))
         } catch (error: any) {
             setError(error.message);
         } finally {
