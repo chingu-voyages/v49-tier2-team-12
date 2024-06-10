@@ -3,10 +3,11 @@ import ColorContextProvider from "@/app/_components/color_context";
 import Footer from "@/app/_components/Footer/footer";
 import ColorPicker from "@/components/next-iro/colorPicker";
 import Header from "./_components/Header/header";
+import HeroSection from "./_components/Hero-Section/heroSection";
 
 export default function Home() {
   const handleColorChange = (color: string) =>{
-    console.log("selected color: ",color);
+    console.log("selected color: ",handleColorChange);
   }
   return (
     <main className="w-full flex min-h-screen flex-col justify-between">
@@ -15,6 +16,7 @@ export default function Home() {
       </div>
         <div className="w-full py-20">
           <div className="max-w-screen-xl mx-auto p-3">
+              <HeroSection/>
               <ColorContextProvider>
                   <ColorPicker/>
                   <div className="mb-10">
