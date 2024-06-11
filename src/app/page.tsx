@@ -10,27 +10,8 @@ export default function Home() {
     console.log("selected color: ",handleColorChange);
   }
   return (
-    <main className="w-full flex min-h-screen flex-col justify-between">
-      <div>
-          <Header/>
-      </div>
-        <div className="w-full py-20">
-          <div className="max-w-screen-xl mx-auto p-3">
-              <HeroSection/>
-              <ColorContextProvider>
-                  <ColorPicker/>
-                  <div className="mb-10">
-                    <h2 className="text-gray-700 text-xl">
-                      <span className="bg-green-500 text-white px-2 py-1 rounded-md border border-green-600">Step 2</span> Write the context and explain how you want to use the selected color.
-                    </h2>
-                  </div>
-                  <PromptWrapper />
-              </ColorContextProvider>
-          </div>
-        </div>
-        <div>
-            <Footer />
-        </div>
-    </main>
+    <section className="w-full flex justify-center items-start pt-24  min-h-screen ">
+        <HeroSection/>
+    </section>
   );
 }

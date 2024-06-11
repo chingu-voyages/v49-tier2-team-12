@@ -2,6 +2,9 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Logo from "../../../../public/Logo.png"
+import Link from "next/link";
+import {neueRemanGt} from "@/app/fonts/font";
+import {Button} from "@/app/_components/Buttons/Buttons";
 
 const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,11 +14,12 @@ const Header: React.FC = () => {
     };
 
     return (
-        <nav className="border-gray-200 bg-gray-800">
+        <nav className="w-full z-50 backdrop-blur  border-gray-200 text-gray-800 border-b-1">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <a href="" className="flex items-center space-x-3 rtl:space-x-reverse">
-                    <Image src={Logo} alt="Logo" style={{ width: '100px', height: '100px' }} />
-                </a>
+                <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+                    <Image src={Logo} alt="Logo" style={{ width: '50px', height: '50px' }} />
+                    <h2 className={`${neueRemanGt.className} text-xl`}>ColorMind</h2>
+                </Link>
                 <button
                     data-collapse-toggle="navbar-default"
                     type="button"
@@ -50,20 +54,13 @@ const Header: React.FC = () => {
                         <li>
                             <a
                                 href="#"
-                                className="block py-2 px-3 text-white rounded hover:text-cyan-300"
+                                className="block py-2 px-3 rounded hover:text-cyan-300"
                                 aria-current="page"
                             >
-                                Color Picker
+                               About Us
                             </a>
                         </li>
-                        <li>
-                            <a
-                                href="#"
-                                className="block py-2 px-3 text-white hover:text-cyan-300 rounded "
-                            >
-                                AI Search
-                            </a>
-                        </li>
+                        <Button label="Color search" style="px-6" />
                     </ul>
                 </div>
             </div>

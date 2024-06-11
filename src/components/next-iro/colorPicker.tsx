@@ -48,7 +48,7 @@ const ColorPicker: React.FC = () => {
     }
 
     return (
-        <div className="flex flex-col lg:flex-row pb-20">
+        <div className="flex flex-col lg:flex-row pb-20 -z-10">
             <div className="lg:w-1/2 flex flex-col items-start justify-center">
                 <div className="mb-10">
                     <h2 className="text-gray-700 text-xl">
@@ -64,7 +64,7 @@ const ColorPicker: React.FC = () => {
                 </div>
             </div>
             <div className="lg:w-1/2 flex items-center justify-center p-4">
-                <div ref={colorPickerRef}></div>
+                <div ref={colorPickerRef} className="-z-10"></div>
             </div>
         </div>
     );
