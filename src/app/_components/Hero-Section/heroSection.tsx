@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Hero from "../../../../public/heroSection1.jpg"
+import Hero from "../../../../public/Designer.png"
 import Image from 'next/image'
 import {montserrat } from "@/app/fonts/font";
 import Link from "next/link";
@@ -17,11 +17,12 @@ const heroSection: React.FC = () => {
                  <Button label="Start picking colors" />
               </Link>
             </div>
-            <aside className="w-full lg:w-1/2 pl-0 lg:pl-12 md:mb-0 mb-12 order-first md:order-last">
+            <aside className="w-full flex justify-center     lg:w-1/2 pl-0 lg:pl-12 md:mb-0 mb-12 order-first md:order-last">
                     <Image
                         src={Hero}
                         alt="Color Picker Hero"
-                        className="w-full rounded-lg shadow-lg"
+                        style={{maxWidth: "450px"}}
+                        className="w-full rounded-full shadow-lg "
                     />
             </aside>
         </div>
