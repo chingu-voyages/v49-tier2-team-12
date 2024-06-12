@@ -5,6 +5,7 @@ import Logo from "../../../../public/Logo.png"
 import Link from "next/link";
 import {neueRemanGt} from "@/app/fonts/font";
 import {Button} from "@/app/_components/Buttons/Buttons";
+import {Pen} from "@/app/_components/icons/pen";
 
 const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -61,7 +62,11 @@ const Header: React.FC = () => {
                             </a>
                         </li>
                         <Link href={"/explore"} >
-                            <Button label="Ai Image Generator" style="px-6" />
+                            <Button label="Ai Image Generator" style="px-6 flex items-center justify-center gap-2 " >
+                                <span className="w-5 text-white ">
+                                     <Pen />
+                                </span>
+                            </Button>
                         </Link>
 
                     </ul>
