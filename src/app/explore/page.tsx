@@ -1,6 +1,7 @@
 import ColorContextProvider from "@/app/_components/color_context";
 import ColorPicker from "@/components/next-iro/colorPicker";
 import PromptWrapper from "@/app/_components/prompt_wrapper";
+import ColorVisionSimulator from "@/app/_components/color_vision";
 
 export default function ExplorePage() {
     return(
@@ -14,6 +15,7 @@ export default function ExplorePage() {
                         </h2>
                     </div>
                     <PromptWrapper />
+                    <ColorVisionSimulator />
                 </ColorContextProvider>
             </div>
         </div>
