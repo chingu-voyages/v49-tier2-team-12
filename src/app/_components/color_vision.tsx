@@ -72,19 +72,18 @@ export default function ColorVisionSimulator() {
                     <div className="flex items-center mb-4">
                         <div className="w-12 h-12 rounded-full mr-3" style={{ backgroundColor: simulation?.normalVision?.code }}></div>
                         <div>
-                            <p className="text-xl">{simulation?.normalVision?.name}</p>
-                            <p className="text-sm text-gray-600">{simulation?.normalVision?.code}</p>
                             <p className="text-sm text-gray-500 mt-1">{simulation?.normalVision?.description}</p>
                         </div>
                     </div>
-                    <h2 className="text-xl font-semibold mb-2">Vision Deficiencies:</h2>
+                    <h2 className="text-2xl font-bold mb-2">Vision Deficiencies:</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {simulation?.visionDeficiencies?.map((deficiency: IVisionDeficiency) => (
                             <div key={deficiency.code} className="flex flex-col items-center p-3 border border-gray-200 rounded-md bg-gray-50">
                                 <div className="w-full h-16 rounded-md mb-2" style={{ backgroundColor: deficiency.code }}></div>
                                 <div className="text-center">
                                     <p className="text-lg font-medium">{deficiency.type}</p>
-                                    <p className="text-sm text-gray-600">{deficiency.code}</p>
+                                    <p className="text-lg font-medium">{deficiency.name}</p>
+                                    <p className="text-sm text-gray-600 uppercase">{deficiency.code}</p>
                                     {deficiency.description && <p className="text-sm text-gray-500 mt-1">{deficiency.description}</p>}
                                 </div>
                             </div>

@@ -92,7 +92,7 @@ export default function PromptWrapper() {
                             <div className="w-12 h-12 rounded-full mr-3" style={{ backgroundColor: recommendation?.selectedColor?.code }}></div>
                             <div>
                                 <p className="text-xl">{recommendation?.selectedColor?.name}</p>
-                                <p className="text-sm text-gray-600">{recommendation?.selectedColor?.code}</p>
+                                <p className="text-sm text-gray-600 uppercase">{recommendation?.selectedColor?.code}</p>
                             </div>
                         </div>
                         <p className="text-lg mb-4"><strong>Context:</strong> {recommendation?.context}</p>

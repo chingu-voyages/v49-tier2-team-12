@@ -12,7 +12,7 @@ const system_message2 = `I want you to be an assistant who is able to simulate h
     },
     "visionDeficiencies": [
         {
-            "type": "Monochromacy (Complete Color Blindness):",
+            "type": "Monochromacy (complete color blindness):",
             "name": "Gray",
             "code": "#808080",
             "description": "Description following this example format: For individuals with complete color vision deficiency, the color #4b0000 might appear as a shade of brown or a dark, muted gray. The saturation and brightness of the color might be reduced, making it harder to distinguish from other dark colors."
