@@ -62,7 +62,7 @@ export default function PromptWrapper() {
     }
 
     return (
-        <div className="w-full flex flex-col lg:flex-row justify-between gap-3 mb-5">
+        <div className="w-full flex flex-col lg:flex-row justify-between gap-3 mb-10">
             <div className="w-full lg:w-2/5 min-h-80 border border-slate-800 rounded-lg shadow ">
                 <form onSubmit={askColorRecommendationToAi} className=" w-full flex  flex-col gap-3 mb-4">
                 <textarea

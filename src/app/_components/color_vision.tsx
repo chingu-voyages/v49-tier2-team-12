@@ -54,8 +54,8 @@ export default function ColorVisionSimulator() {
     };
 
     return (
-        <div className="w-full flex flex-col lg:flex-row justify-between gap-3 mb-5">
-            <div className="w-full lg:w-2/5 min-h-80 border border-slate-800 rounded-lg shadow">
+        <div className="w-full flex flex-col justify-between gap-3 mb-5">
+            <div className="w-full lg:w-2/5 m-auto border border-slate-800 rounded-lg shadow">
                 <button
                     onClick={simulateColorVision}
                     className="w-full hover:text-white hover:bg-gray-700 h-12 text-gray-950 bg-yellow-300 py-2 rounded-sm"
@@ -67,7 +67,7 @@ export default function ColorVisionSimulator() {
             </div>
 
             {simulation ? (
-                <div className="lg:w-3/5 text-black hover:text-slate-400 p-4 border border-slate-800 rounded-lg shadow dark:border-gray-700 dark:hover:bg-gray-700">
+                <div className="w-full text-black hover:text-slate-400 p-4 border border-slate-800 rounded-lg shadow dark:border-gray-700 dark:hover:bg-gray-700">
                     <h1 className="text-2xl font-bold mb-2">Normal Vision:</h1>
                     <div className="flex items-center mb-4">
                         <div className="w-12 h-12 rounded-full mr-3" style={{ backgroundColor: simulation?.normalVision?.code }}></div>
@@ -79,9 +79,11 @@ export default function ColorVisionSimulator() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {simulation?.visionDeficiencies?.map((deficiency: IVisionDeficiency) => (
                             <div key={deficiency.code} className="flex flex-col items-center p-3 border border-gray-200 rounded-md bg-gray-50">
+                                <div className="text-center">
+                                    <p className="text-lg font-medium mb-2">{deficiency.type}</p>
+                                </div>
                                 <div className="w-full h-16 rounded-md mb-2" style={{ backgroundColor: deficiency.code }}></div>
                                 <div className="text-center">
-                                    <p className="text-lg font-medium">{deficiency.type}</p>
                                     <p className="text-lg font-medium">{deficiency.name}</p>
                                     <p className="text-sm text-gray-600 uppercase">{deficiency.code}</p>
                                     {deficiency.description && <p className="text-sm text-gray-500 mt-1">{deficiency.description}</p>}

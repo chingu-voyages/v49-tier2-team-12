@@ -15,6 +15,11 @@ export default function ExplorePage() {
                         </h2>
                     </div>
                     <PromptWrapper />
+                    <div className="mb-10">
+                        <h2 className="text-gray-700 text-xl">
+                            <span className="bg-green-500 text-white px-2 py-1 rounded-md border border-green-600">Step 3</span> Check how the selected color might look like for users with vision deficiencies.
+                        </h2>
+                    </div>
                     <ColorVisionSimulator />
                 </ColorContextProvider>
             </div>
