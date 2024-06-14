@@ -20,3 +20,20 @@ body {
   color: rgb(var(--foreground-rgb));
  
 }
+
+@layer base {
+
+
+  ::-webkit-scrollbar {
+    @apply h-3 w-3;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-50;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-lg border-2 border-solid  bg-scrollbar-thumb hover:bg-scrollbar-thumb-hover;
+  }
+
+}
