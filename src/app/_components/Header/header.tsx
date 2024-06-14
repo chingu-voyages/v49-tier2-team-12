@@ -2,6 +2,10 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Logo from "../../../../public/Logo.png"
+import Link from "next/link";
+import {neueRemanGt} from "@/app/fonts/font";
+import {Button} from "@/app/_components/Buttons/Buttons";
+import {Pen} from "@/app/_components/icons/pen";
 
 const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,11 +15,12 @@ const Header: React.FC = () => {
     };
 
     return (
-        <nav className="border-gray-200 bg-gray-800">
-            <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <a href="" className="flex items-center space-x-3 rtl:space-x-reverse">
-                    <Image src={Logo} alt="Logo" style={{ width: '100px', height: '100px' }} />
-                </a>
+        <nav className="w-full z-50 backdrop-blur shadow-sm text-gray-800 border-b-1">
+            <div className=" max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+                    <Image src={Logo} alt="Logo" style={{ width: '50px', height: '50px' }} />
+                    <h2 className={`${neueRemanGt.className} text-xl`}>ColorMind</h2>
+                </Link>
                 <button
                     data-collapse-toggle="navbar-default"
                     type="button"
@@ -50,20 +55,20 @@ const Header: React.FC = () => {
                         <li>
                             <a
                                 href="#"
-                                className="block py-2 px-3 text-white rounded hover:text-cyan-300"
+                                className="block py-2 px-3 rounded hover:text-cyan-300"
                                 aria-current="page"
                             >
-                                Color Picker
+                               About Us
                             </a>
                         </li>
-                        <li>
-                            <a
-                                href="#"
-                                className="block py-2 px-3 text-white hover:text-cyan-300 rounded "
-                            >
-                                AI Search
-                            </a>
-                        </li>
+                        <Link href={"/explore"} >
+                            <Button label="Ai Image Generator" style="px-6 flex items-center justify-center gap-2 " >
+                                <span className="w-5 text-white ">
+                                     <Pen />
+                                </span>
+                            </Button>
+                        </Link>
+
                     </ul>
                 </div>
             </div>

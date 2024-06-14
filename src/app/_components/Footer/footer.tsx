@@ -6,7 +6,7 @@ import Image from 'next/image'
 export default function Footer() {
 
     return (
-        <footer className="px-4 sm:p-6 text-white bg-gray-800">
+        <div className="px-12 sm:p-6 text-white bg-gray-800">
             <div className="mx-auto max-w-screen-xl items-center	">
                 <div className="md:flex md:justify-between items-center">
                     <div className="mb-6 md:mb-0 ">
@@ -23,7 +23,7 @@ export default function Footer() {
                     </div>
                     <div className="flex text-center flex-col item-center justify-center lg:ms-5 md:my-0 my-3 ">
                         <a className="hover:text-cyan-300	" href="https://www.chingu.io/">
-                            Chigu
+                            Chingu
                         </a>
                         <a className="hover:text-cyan-300	" href="https://github.com/chingu-voyages/v49-tier2-team-12">
                             Voyages V49 Team 12
@@ -114,6 +114,6 @@ export default function Footer() {
 
                 </div>
             </div>
-        </footer>
+        </div>
     )
 }
