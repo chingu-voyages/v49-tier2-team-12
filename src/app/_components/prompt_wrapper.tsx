@@ -43,7 +43,7 @@ export default function PromptWrapper() {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ prompt: `Identify the language in which the prompt is written and answer in that language. If you can't identify, then write your answer in English. Suggest color recommendations and compatible colors based on the context: ${context}, and the selected color : ${state?.selectedColor}`} )
+                body: JSON.stringify({ prompt: `Identify the language in which the prompt is written and answer in that language. If you cannot identify, then write your answer in English. Suggest color recommendations and compatible colors based on the context: ${context}, and the selected color : ${state?.selectedColor}`} )
             });
 
             if (!response.ok) {
