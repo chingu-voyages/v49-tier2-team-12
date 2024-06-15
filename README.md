@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="./public/Logo.png" alt="logo" width="180"><img src="./public/CMlogo.png" alt="logo" width="120">
+    <img src="./public/logo-full.png" width="300">
   <p>
     <a href="https://v49-tier2-team-12.vercel.app">View App</a>
     &nbsp;·&nbsp;
