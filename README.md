@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="./public/CMLogo.png" alt="logo" width="250">
+    <img src="./public/Logo.png" alt="logo" width="180"><img src="./public/CMlogo.png" alt="logo" width="120">
   <p>
     <a href="https://v49-tier2-team-12.vercel.app">View App</a>
     &nbsp;·&nbsp;
@@ -28,7 +28,10 @@ ColorMind is a web application that helps users receive color recommendations ba
 
 ## Tools Used
 <div align="center">  
-<img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/VS%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/Trello-0079BF?style=for-the-badge&logo=trello&logoColor=ffffff"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/vercel-black?style=for-the-badge&logo=vercel&logoColor=white"> &nbsp;&nbsp;
+<img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/VS%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"> &nbsp;&nbsp;
+</div>
+<div align="center">  
+<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/Trello-0079BF?style=for-the-badge&logo=trello&logoColor=ffffff"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/vercel-black?style=for-the-badge&logo=vercel&logoColor=white"> &nbsp;&nbsp;
 </div>
 
 ## Features
@@ -42,12 +45,12 @@ Open our app on [Vercel](https://v49-tier2-team-12.vercel.app/) </br>
 
 ## Getting Started (locally)
 Clone the repository to your local machine. </br>
-Run <i>npm install</i> in the terminal for the necessary dependencies
+Run <i>npm install</i> in the terminal for the necessary dependencies. </br>
 Install @jaames/iro for the color picker, openai for AI connectivity. </br>
 Create a local .env file at the root level of the project and add the API key you receive from OpenAI (you have to create an account first):
- - OPENAI_API_KEY from OpenAI [OpenAI](https://platform.openai.com/playground)
-Run <i>npm run dev</i> in the terminal.
-Check the app at the indicated local link (ex: http://localhost:3000)
+ - OPENAI_API_KEY from [OpenAI](https://platform.openai.com/playground) </br>
+Run <i>npm run dev</i> in the terminal. </br>
+Check the app at the indicated local link (ex: http://localhost:3000).
 
 ## Our Team
 ### Developers:
