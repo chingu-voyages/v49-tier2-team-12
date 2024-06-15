@@ -1,18 +1,13 @@
 <div align="center">
-    <img src="./src/assets/img/logo.svg" alt="logo" width="300">
+    <img src="./public/CMLogo.png" alt="logo" width="250">
   <p>
-    <a href=" https://v49-tier2-team-12.vercel.app/">View App</a>
+    <a href="https://v49-tier2-team-12.vercel.app">View App</a>
     &nbsp;·&nbsp;
     <a href="https://github.com/chingu-voyages/v49-tier2-team-12/issues">Report Bug</a>
     &nbsp;·&nbsp;
     <a href="https://github.com/chingu-voyages/v49-tier2-team-12/issues">Request Feature</a>
   </p>
 </div>
-
-## Preview
-![Preview](./src/assets/img/screenshots/home-page.jpg) </br>
-![Preview](./src/assets/img/screenshots/search-page.jpg) </br>
-![Preview](./src/assets/img/screenshots/dinosaur-page.jpg)
 
 ## Table of Contents
 - [Project Description](#project-description)
