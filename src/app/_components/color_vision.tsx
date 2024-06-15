@@ -55,7 +55,7 @@ export default function ColorVisionSimulator() {
 
     return (
         <div className="w-full flex flex-col justify-between gap-3 mb-5">
-            <div className="w-full lg:w-2/5 m-auto border border-slate-800 rounded-lg shadow mb-10 __className_a82057">
+            <div className="w-full lg:w-2/5 border border-slate-800 rounded-lg shadow mb-10 __className_a82057">
                 <button
                     onClick={simulateColorVision}
                     className="w-full hover:text-white hover:bg-blue-600 h-12 text-gray-950 bg-yellow-300 py-2 rounded-lg font-bold "
@@ -93,7 +93,7 @@ export default function ColorVisionSimulator() {
                     </div>
                 </div>
             ) : (
-                <div className="flex-1 min-h-80 p-3 bg-white text-sm text-gray-400 hover:text-slate-400 border border-slate-800 rounded-lg shadow dark:border-gray-700 dark:hover:bg-gray-700">
+                <div className="flex-1 min-h-80 p-3 bg-white text-sm text-gray-400 hover:text-slate-400 border box-shadow rounded-lg ">
                     Simulation results will be displayed here.
                 </div>
             )}

@@ -63,13 +63,13 @@ export default function PromptWrapper() {
 
     return (
         <div className="w-full flex flex-col lg:flex-row justify-between gap-3 pb-20">
-            <div className="w-full lg:w-2/5 min-h-80 border border-slate-800 rounded-lg shadow ">
-                <form onSubmit={askColorRecommendationToAi} className=" w-full flex  flex-col gap-3 mb-4">
+            <div className="w-full lg:w-2/5 min-h-80 border  rounded-lg box-shadow ">
+                <form onSubmit={askColorRecommendationToAi} className=" w-full flex  flex-col gap-4 mb-4">
                 <textarea
                     name="context"
                     value={context}
                     // className="w-full text-gray-950 outline-none focus:outline-none rounded-sm p-2 resize-vertical border border-gray-300"
-                    className="block min-h-56 p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
+                    className="block min-h-56 p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border focus:ring-blue-500 focus:border-blue-500 box-shadow "
                     placeholder="Type your message here"
                     onChange={handleTextareaChange}
                 />
@@ -95,7 +95,7 @@ export default function PromptWrapper() {
                                 <p className="text-sm text-gray-600 uppercase">{recommendation?.selectedColor?.code}</p>
                             </div>
                         </div>
-                        <p className="text-lg mb-4"><strong>Context:</strong> {recommendation?.context}</p>
+                        <p className="text-xl mb-4"><strong>Context:</strong> {recommendation?.context}</p>
                         <h2 className="text-xl font-semibold mb-2">Color Recommendations:</h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                             {
@@ -113,7 +113,7 @@ export default function PromptWrapper() {
                         </div>
                     </div> :
                     <div
-                        className="flex-1 min-h-80 p-3 bg-white text-sm text-gray-400 border border-slate-800 rounded-lg shadow border-gray-700">
+                        className="flex-1 min-h-80 p-3 bg-white text-sm text-gray-400 border  rounded-lg  box-shadow">
                         Ai response goes here
                     </div>
             }
