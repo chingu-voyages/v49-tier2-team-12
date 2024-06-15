@@ -55,10 +55,10 @@ export default function ColorVisionSimulator() {
 
     return (
         <div className="w-full flex flex-col justify-between gap-3 mb-5">
-            <div className="w-full lg:w-2/5 m-auto border border-slate-800 rounded-lg shadow mb-10">
+            <div className="w-full lg:w-2/5 m-auto border border-slate-800 rounded-lg shadow mb-10 __className_a82057">
                 <button
                     onClick={simulateColorVision}
-                    className="w-full hover:text-white hover:bg-blue-600 h-12 text-gray-950 bg-yellow-300 py-2 rounded-lg font-bold"
+                    className="w-full hover:text-white hover:bg-blue-600 h-12 text-gray-950 bg-yellow-300 py-2 rounded-lg font-bold "
                     disabled={isLoading}
                 >
                     {isLoading ? <ThreeDotLoader /> : 'Simulate Color Vision'}

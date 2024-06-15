@@ -74,7 +74,7 @@ export default function PromptWrapper() {
                     onChange={handleTextareaChange}
                 />
                     <button type="submit"
-                            className="w-full hover:text-white hover:bg-blue-600 h-12 text-gray-950 bg-yellow-300 py-2 rounded-md font-bold">
+                            className="w-full hover:text-white hover:bg-blue-600 h-12 text-gray-950 bg-yellow-300 py-2 rounded-md font-bold __className_a82057">
                         {isLoading ? <ThreeDotLoader /> : 'Ask Ai'}
                     </button>
                     {error && <div className="text-red-600 pl-2">{error}</div>}
