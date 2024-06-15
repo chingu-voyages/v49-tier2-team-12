@@ -43,7 +43,7 @@ export default function PromptWrapper() {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ prompt: `Identify the language in which the prompt is written and answer in that language. If you can't identify, then write your answer in English. Suggest color recommendations and compatible colors based on the context: ${context}, and the selected color : ${state?.selectedColor}`} )
+                body: JSON.stringify({ prompt: `Identify the language in which the prompt is written and answer in that language. If you cannot identify, then write your answer in English. Suggest color recommendations and compatible colors based on the context: ${context}, and the selected color : ${state?.selectedColor}`} )
             });
 
             if (!response.ok) {
@@ -62,7 +62,7 @@ export default function PromptWrapper() {
     }
 
     return (
-        <div className="w-full flex flex-col lg:flex-row justify-between gap-3 mb-5">
+        <div className="w-full flex flex-col lg:flex-row justify-between gap-3 mb-10">
             <div className="w-full lg:w-2/5 min-h-80 border border-slate-800 rounded-lg shadow ">
                 <form onSubmit={askColorRecommendationToAi} className=" w-full flex  flex-col gap-3 mb-4">
                 <textarea
@@ -92,7 +92,7 @@ export default function PromptWrapper() {
                             <div className="w-12 h-12 rounded-full mr-3" style={{ backgroundColor: recommendation?.selectedColor?.code }}></div>
                             <div>
                                 <p className="text-xl">{recommendation?.selectedColor?.name}</p>
-                                <p className="text-sm text-gray-600">{recommendation?.selectedColor?.code}</p>
+                                <p className="text-sm text-gray-600 uppercase">{recommendation?.selectedColor?.code}</p>
                             </div>
                         </div>
                         <p className="text-lg mb-4"><strong>Context:</strong> {recommendation?.context}</p>
