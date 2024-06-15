@@ -62,7 +62,7 @@ export default function PromptWrapper() {
     }
 
     return (
-        <div className="w-full flex flex-col lg:flex-row justify-between gap-3 mb-10">
+        <div className="w-full flex flex-col lg:flex-row justify-between gap-3 pb-20">
             <div className="w-full lg:w-2/5 min-h-80 border border-slate-800 rounded-lg shadow ">
                 <form onSubmit={askColorRecommendationToAi} className=" w-full flex  flex-col gap-3 mb-4">
                 <textarea
@@ -74,7 +74,7 @@ export default function PromptWrapper() {
                     onChange={handleTextareaChange}
                 />
                     <button type="submit"
-                            className="w-full hover:text-white hover:bg-gray-700 h-12 text-gray-950 bg-yellow-300 py-2 rounded-sm">
+                            className="w-full hover:text-white hover:bg-blue-600 h-12 text-gray-950 bg-yellow-300 py-2 rounded-md font-bold">
                         {isLoading ? <ThreeDotLoader /> : 'Ask Ai'}
                     </button>
                     {error && <div className="text-red-600 pl-2">{error}</div>}
@@ -85,7 +85,7 @@ export default function PromptWrapper() {
                 recommendation ?
                     <div
                         // className="w-1/2 text-black p-4 border border-gray-300 rounded-sm  shadow-sm"
-                        className="lg:w-3/5 text-black hover:text-slate-400 p-4 border border-slate-800 rounded-lg shadow border-gray-700 hover:bg-gray-700"
+                        className="lg:w-3/5 text-black p-4 border border-slate-800 rounded-lg shadow border-gray-700"
                     >
                         <h1 className="text-2xl font-bold mb-2">Selected Color:</h1>
                         <div className="flex items-center mb-4">
@@ -113,7 +113,7 @@ export default function PromptWrapper() {
                         </div>
                     </div> :
                     <div
-                        className="flex-1 min-h-80 p-3 bg-white text-sm text-gray-400 hover:text-slate-400 border border-slate-800 rounded-lg shadow border-gray-700 hover:bg-gray-700">
+                        className="flex-1 min-h-80 p-3 bg-white text-sm text-gray-400 border border-slate-800 rounded-lg shadow border-gray-700">
                         Ai response goes here
                     </div>
             }
