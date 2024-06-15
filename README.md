@@ -1,39 +1,61 @@
-# voyage-tasks
+<div align="center">
+    <img src="./src/assets/img/logo.svg" alt="logo" width="300">
+  <p>
+    <a href=" https://v49-tier2-team-12.vercel.app/">View App</a>
+    &nbsp;·&nbsp;
+    <a href="https://github.com/chingu-voyages/v49-tier2-team-12/issues">Report Bug</a>
+    &nbsp;·&nbsp;
+    <a href="https://github.com/chingu-voyages/v49-tier2-team-12/issues">Request Feature</a>
+  </p>
+</div>
 
-Your project's `readme` is as important to success as your code. For 
-this reason you should put as much care into its creation and maintenance
-as you would any other component of the application.
+## Preview
+![Preview](./src/assets/img/screenshots/home-page.jpg) </br>
+![Preview](./src/assets/img/screenshots/search-page.jpg) </br>
+![Preview](./src/assets/img/screenshots/dinosaur-page.jpg)
 
-If you are unsure of what should go into the `readme` let this article,
-written by an experienced Chingu, be your starting point - 
-[Keys to a well written README](https://tinyurl.com/yk3wubft).
+## Table of Contents
+- [Project Description](#project-description)
+- [Built With](#built-with)
+- [Tools Used](#tools-used)
+- [Features](#features)
+- [Getting Started (on web)](#getting-started-on-web)
+- [Getting Started (locally)](#getting-started-locally)
+- [Our Team](#our-team)
 
-And before we go there's "one more thing"! Once you decide what to include
-in your `readme` feel free to replace the text we've provided here.
+## Project Description
+ColorMind is a web application that helps users receive color recommendations based on a context. Users pick a color and write the context, explaining how they want to use it. They get an AI response with compatible color and recommendations. They can also simulate how the selected color might look like for people with vision deficiencies. 
 
-> Own it & Make it your Own!
+## Built With
+<div align="center">
+<img src="https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/OpenAI_API-%2300A67C.svg?style=for-the-badge&logo=openai&logoColor=white"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/iro.js-%23FF5733?style=for-the-badge&logo=iro.js&logoColor=white"> &nbsp;&nbsp;
+</div>
 
-## Team Documents
+## Tools Used
+<div align="center">  
+<img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/VS%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/Trello-0079BF?style=for-the-badge&logo=trello&logoColor=ffffff"> &nbsp;&nbsp;<img src="https://img.shields.io/badge/vercel-black?style=for-the-badge&logo=vercel&logoColor=white"> &nbsp;&nbsp;
+</div>
 
-You may find these helpful as you work together to organize your project.
+## Features
+- **Color selection:** Users are able to select a color from the wheel or add their own color hexadecimal code
+- **Context interpretation:** Users are able to provide a context for using that color and the AI will adapt the response based on it
+- **Color recommendations:** The AI will give recommendations and compatible colors, presenting their characteristics
+- **Vision deficiencies simulation:** Users are able to simulate how color choices might appear to people with different types of color vision deficiencies
 
-- [Team Project Ideas](./docs/team_project_ideas.md)
-- [Team Decision Log](./docs/team_decision_log.md)
+## Getting Started (on web)
+Open our app on [Vercel](https://v49-tier2-team-12.vercel.app/) </br>
 
-Meeting Agenda templates (located in the `/docs` directory in this repo):
-
-- Meeting - Voyage Kickoff --> ./docs/meeting-voyage_kickoff.docx
-- Meeting - App Vision & Feature Planning --> ./docs/meeting-vision_and_feature_planning.docx
-- Meeting - Sprint Retrospective, Review, and Planning --> ./docs/meeting-sprint_retrospective_review_and_planning.docx
-- Meeting - Sprint Open Topic Session --> ./docs/meeting-sprint_open_topic_session.docx
+## Getting Started (locally)
+Clone the repository to your local machine. </br>
+Run <i>npm install</i> in the terminal for the necessary dependencies
+Install @jaames/iro for the color picker, openai for AI connectivity. </br>
+Create a local .env file at the root level of the project and add the API key you receive from OpenAI (you have to create an account first):
+ - OPENAI_API_KEY from OpenAI [OpenAI](https://platform.openai.com/playground)
+Run <i>npm run dev</i> in the terminal.
+Check the app at the indicated local link (ex: http://localhost:3000)
 
 ## Our Team
-
-Everyone on your team should add their name along with a link to their GitHub
-& optionally their LinkedIn profiles below. Do this in Sprint #1 to validate
-your repo access and to practice PR'ing with your team *before* you start
-coding!
-
+### Developers:
 - Parykhan jameel: [GitHub](https://github.com/parykhan-jameel) / [LinkedIn](https://linkedin.com/in/parykhan-jameel)
 - Andrei Olteanu: [GitHub](https://github.com/andreiolteanu555) / [LinkedIn](https://www.linkedin.com/in/andrei-olteanu-9009/)
 - Riry Nomenjanahary: [GitHub](https://github.com/TiaDev7474) / [LinkedIn](https://www.linkedin.com/in/riry-nomenjanahary-a47a85264)
