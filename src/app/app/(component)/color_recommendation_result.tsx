@@ -7,9 +7,19 @@ import ColorCard from "@/app/app/(component)/color_card";
 
 
 export default function ColorRecommendationResult() {
-    const {recommendation} = useColorRecommendationContext()
+    const {recommendation, error} = useColorRecommendationContext()
     return(
-        <div className="w-full">
+        <div className="w-full flex justify-center">
+            {
+                error && (
+                    <div className="w-full m-auto flex justify-center items-center text-red-400">
+                        <span>
+                            {error} . Please Try again
+                        </span>
+
+                    </div>
+                )
+            }
             {
                 recommendation && (
                     <div

@@ -4,10 +4,12 @@ import {IVisionDeficiency} from "@/app/_components/color_vision";
 import {useColorRecommendationContext} from "@/app/app/(component)/context/recommendation";
 
 export default function VisionResult() {
-    const {visions: simulation} = useColorRecommendationContext()
+    const {visions: simulation, error} = useColorRecommendationContext()
     return(
         <React.Fragment>
+
             {
+
                 simulation? (
                     <div className="w-full text-gray-700 p-6 rounded-lg ">
                         <h1 className="text-xl font-medium py-6 ">Normal Vision</h1>
@@ -35,8 +37,20 @@ export default function VisionResult() {
                         </div>
                     </div>
                 ): (
-                    <div className="w-full min-h-80 flex justify-center items-center p-3 bg-white text-sm text-gray-400 hover:text-slate-400 rounded-lg ">
-                        Simulation results will be displayed here.
+                    <div className="w-full min-h-80 flex flex-col justify-center items-center p-3 bg-white text-sm text-gray-400 hover:text-slate-400 rounded-lg ">
+
+                        {
+                            error && (
+                                <div className="w-full m-auto flex justify-center items-center text-red-400">
+                                    <span>
+                                        {error} . Please Try again
+                                    </span>
+
+                                </div>
+                            )}
+                        {
+                            !error && <span>Simulation results will be displayed here. </span>
+                        }
                     </div>
                 )
             }
