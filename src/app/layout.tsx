@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
-            <header className="fixed w-full">
+            <header className="fixed w-full z-20">
               <Header/>
             </header>
             <main>
