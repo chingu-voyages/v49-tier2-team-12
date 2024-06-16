@@ -19,7 +19,7 @@ export default function Prompt() {
         if(suggestion){
             setContext(suggestion)
         }
-    } , []);
+    } , [suggestion]);
     return(
        <div className="w-full ">
            <form onSubmit={askColorRecommendationToAi} className="w-full flex flex-col gap-6 lg:flex-row  justify-center items-center">
