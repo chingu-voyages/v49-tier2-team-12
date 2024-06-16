@@ -13,7 +13,6 @@ export default function ColorVision() {
             <ColorRecommendationProvider>
                 <ColorContextProvider>
                     <div className="w-full flex-col px-6 flex flex-wrap justify-start bg-white shadow items-start gap-3 py-6 mb-6">
-                        <p> </p>
                         <h3 className="flex gap-3 font-bold text-xl">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-route">
                                 <circle cx="6" cy="19" r="3"/>
@@ -22,6 +21,7 @@ export default function ColorVision() {
                             </svg>
                             Guidelines
                         </h3>
+                        <p className="text-xl"> Check how the selected color might look like for users with vision deficiencies</p>
                         <Step title={"Step 1 "} description={"Choose a color you want to simulate for visions deficiencies"} />
                         <Step title={"Step 2 "} description={"Click the simulate button"} />
                     </div>
