@@ -13,7 +13,7 @@ const heroSection: React.FC = () => {
               <span className="text-xl font-light">Illuminate Your Creativity</span>
               <h1 className={`${montserrat.className} text-3xl lg:text-6xl  font-extrabold mb-4`}> AI-Powered Color Discovery</h1>
               <p className="text-lg font-normal mb-8">Discover the ideal color for your next project with our powerful color picker tool. Explore millions of shades, get color inspiration, and seamlessly integrate your choices.</p>
-              <Link href={"/explore"}>
+              <Link href={"/app"}>
                  <Button label="Start picking colors" />
               </Link>
             </div>
