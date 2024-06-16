@@ -1,0 +1,44 @@
+"use client"
+import Modal from "@/app/app/(component)/modal/modal";
+import ColorPicker from "@/components/next-iro/colorPicker";
+import React , {useContext , useState} from "react";
+import { useColorContext} from "@/app/_components/color_context";
+
+
+export default function ColorChoose() {
+    const [modal, setModal] = useState<boolean>(false);
+     const {selectedColor} = useColorContext()
+    const handleOnCloseModal = () => {
+        setModal(false);
+    }
+    const handleOutsideClick = (event: MouseEvent) => {
+        const target = event.target as HTMLElement;
+        if (target.classList.contains('modal')) {
+           setModal(false)
+        }
+    };
+
+    React.useEffect(() => {
+        if (modal) {
+            document.addEventListener('mousedown', handleOutsideClick);
+        } else {
+            document.removeEventListener('mousedown', handleOutsideClick);
+        }
+        return () => {
+            document.removeEventListener('mousedown', handleOutsideClick);
+        };
+    }, [modal]);
+    const handleOnOpenModal = () => {
+        setModal(true)
+    }
+    return(
+        <div className="">
+            <button onClick={handleOnOpenModal}>
+                <div className="w-12 h-12" style={{ backgroundColor: selectedColor ? selectedColor : "black" }} />
+            </button>
+            <Modal shouldShowModal={modal} handleOnCLoseModal={handleOnCloseModal}>
+                <ColorPicker />
+            </Modal>
+        </div>
+    )
+}

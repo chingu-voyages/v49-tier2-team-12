@@ -1,12 +1,12 @@
 'use client'
 
-import React , {createContext , useState} from "react";
+import React , {createContext , useContext , useState} from "react";
 
 export type ColorContextType = {
     selectedColor: string | null,
     handleColorSelection: (value: string) => void
 }
-export const ColorContext = createContext<ColorContextType | null>(null);
+export const ColorContext = createContext<ColorContextType>({} as ColorContextType);
 
 interface ISelectedColor {
     selectedColor: string | null,
@@ -29,3 +29,5 @@ export default function ColorContextProvider({
   )
 
 }
+
+export const useColorContext = () => useContext<ColorContextType>(ColorContext)

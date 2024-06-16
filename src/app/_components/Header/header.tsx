@@ -6,6 +6,7 @@ import Link from "next/link";
 import {neueRemanGt} from "@/app/fonts/font";
 import {Button} from "@/app/_components/Buttons/Buttons";
 import {Pen} from "@/app/_components/icons/pen";
+import {usePathname} from "next/navigation";
 
 const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,7 +14,7 @@ const Header: React.FC = () => {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-
+    const  pathname = usePathname();
     return (
         <nav className="w-full z-50 backdrop-blur shadow-sm text-gray-800 border-b-1">
             <div className=" max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -61,14 +62,17 @@ const Header: React.FC = () => {
                                About Us
                             </a>
                         </li>
-                        <Link href={"/explore"} >
-                            <Button label="Ai Color Generator" style="px-6 flex items-center justify-center gap-2 __className_a82057" >
+                        {
+                            pathname == "/" && (
+                                <Link href={"/explore"} >
+                                    <Button label="Ai Color Generator" style="px-6 flex items-center justify-center gap-2 __className_a82057" >
                                 <span className="w-5 text-white ">
                                      <Pen />
                                 </span>
-                            </Button>
-                        </Link>
-
+                                    </Button>
+                                </Link>
+                            )
+                        }
                     </ul>
                 </div>
             </div>
