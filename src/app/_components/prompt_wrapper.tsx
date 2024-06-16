@@ -69,7 +69,7 @@ export default function PromptWrapper() {
                     name="context"
                     value={context}
                     // className="w-full text-gray-950 outline-none focus:outline-none rounded-sm p-2 resize-vertical border border-gray-300"
-                    className="block min-h-56 p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border focus:ring-blue-500 focus:border-blue-500 box-shadow "
+                    className="block min-h-56 p-6 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border focus:ring-blue-500 focus:border-blue-500 box-shadow "
                     placeholder="Type your message here"
                     onChange={handleTextareaChange}
                 />
@@ -85,9 +85,9 @@ export default function PromptWrapper() {
                 recommendation ?
                     <div
                         // className="w-1/2 text-black p-4 border border-gray-300 rounded-sm  shadow-sm"
-                        className="lg:w-3/5 text-black p-4 border border-slate-800 rounded-lg shadow border-gray-700"
+                        className="lg:w-3/5 text-black p-6 border  rounded-lg  box-shadow"
                     >
-                        <h1 className="text-2xl font-bold mb-2">Selected Color:</h1>
+                        <h1 className="text-2xl font-bold mb-2 __className_f8e921">Selected Color:</h1>
                         <div className="flex items-center mb-4">
                             <div className="w-12 h-12 rounded-full mr-3" style={{ backgroundColor: recommendation?.selectedColor?.code }}></div>
                             <div>
@@ -95,12 +95,12 @@ export default function PromptWrapper() {
                                 <p className="text-sm text-gray-600 uppercase">{recommendation?.selectedColor?.code}</p>
                             </div>
                         </div>
-                        <p className="text-xl mb-4"><strong>Context:</strong> {recommendation?.context}</p>
-                        <h2 className="text-xl font-semibold mb-2">Color Recommendations:</h2>
+                        <p className="text-2xl mb-4"><strong className="__className_f8e921">Context:</strong> {recommendation?.context}</p>
+                        <h2 className="text-2xl font-semibold mb-2 __className_f8e921">Color Recommendations:</h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                             {
                                 recommendation?.compatibleColors?.map((color: CompatibleColor) => (
-                                    <div key={color.code} className="flex flex-col items-center p-3 border border-gray-200 rounded-md bg-gray-50">
+                                    <div key={color.code} className="flex flex-col items-center p-3 border border-gray-200 rounded-md bg-gray-50 box-shadow">
                                         <div className="w-full h-16 rounded-md mb-2" style={{ backgroundColor: color.code }}></div>
                                         <div className="text-center">
                                             <p className="text-lg font-medium">{color.name}</p>
