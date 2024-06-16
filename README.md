@@ -19,7 +19,7 @@
 - [Our Team](#our-team)
 
 ## Project Description
-ColorMind is a web application that helps users receive color recommendations based on a context. Users pick a color and write the context, explaining how they want to use it. They get an AI response with compatible color and recommendations. They can also simulate how the selected color might look like for people with vision deficiencies. 
+ColorMind is a web application that helps users receive color recommendations based on a context. Users pick a color and write the context, explaining how they want to use it. They get an AI response with compatible colors and recommendations. They can also simulate how the selected color might look like for people with vision deficiencies. 
 
 ## Built With
 <div align="center">
