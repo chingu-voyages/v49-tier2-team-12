@@ -52,15 +52,6 @@ const Header: React.FC = () => {
                     id="navbar-default"
                 >
                     <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 ">
-                        <li>
-                            <a
-                                href="#"
-                                className="block py-2 px-3 rounded hover:text-cyan-300"
-                                aria-current="page"
-                            >
-                               About Us
-                            </a>
-                        </li>
                         <Link href={"/explore"} >
                             <Button label="Ai Color Generator" style="px-6 flex items-center justify-center gap-2 __className_a82057" >
                                 <span className="w-5 text-white ">
