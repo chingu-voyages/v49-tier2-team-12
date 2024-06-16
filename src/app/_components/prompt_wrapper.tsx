@@ -95,7 +95,7 @@ export default function PromptWrapper() {
                                 <p className="text-sm text-gray-600 uppercase">{recommendation?.selectedColor?.code}</p>
                             </div>
                         </div>
-                        <p className="text-2xl text-gray-700 mb-4"><strong className="__className_f8e921">Context:</strong> {recommendation?.context}</p>
+                        <p className="text-xl text-gray-700 mb-4"><strong className="text-2xl __className_f8e921">Context:</strong> {recommendation?.context}</p>
                         <h2 className="text-2xl text-gray-700 font-semibold mb-2 __className_f8e921">Color Recommendations:</h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                             {
@@ -103,7 +103,7 @@ export default function PromptWrapper() {
                                     <div key={color.code} className="flex flex-col items-center p-3 border border-gray-200 rounded-md bg-gray-50 box-shadow transform transition-transform hover:-translate-y-0.5 hover:-translate-x-0.5">
                                         <div className="w-full h-16 rounded-md mb-2" style={{ backgroundColor: color.code }}></div>
                                         <div className="text-center">
-                                            <p className="text-lg font-medium">{color.name}</p>
+                                            <p className="text-xl font-medium ">{color.name}</p>
                                             <p className="text-sm text-gray-600">{color.code}</p>
                                             {color.description && <p className="text-sm text-gray-500 mt-1">{color.description}</p>}
                                         </div>
@@ -113,7 +113,7 @@ export default function PromptWrapper() {
                         </div>
                     </div> :
                     <div
-                        className="flex-1 min-h-80 p-3 bg-white text-sm text-gray-400 border  rounded-lg  box-shadow">
+                        className="flex-1 min-h-80 p-3 bg-white text-sm text-gray-400 border  rounded-lg  box-shadow transform transition-transform hover:-translate-y-0.5 hover:-translate-x-0.5">
                         Ai response goes here
                     </div>
             }
