@@ -28,7 +28,7 @@ export default function ExplorePage() {
                         <div className="mb-10 flex flex-col lg:flex-row">
                             <div className="lg:w-1/6">
                                 <h2 className="text-xl __className_f8e921">
-                                    <span className="bg-blue-500 text-white px-4 py-1 rounded-lg border border-blue-600">Step 2</span>
+                                    <span className="bg-blue-500 text-white px-4 py-1 rounded-lg border border-blue-600">Step 3</span>
                                 </h2>
                             </div>
                             <div className="lg:w-5/6">
