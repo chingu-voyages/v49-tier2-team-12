@@ -12,14 +12,14 @@ export default function Prompt() {
     const {askColorRecommendation, isLoading} = useColorRecommendationContext()
     const askColorRecommendationToAi = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        console.log(context, selectedColor)
-        await askColorRecommendation(selectedColor!)
+
+        await askColorRecommendation(selectedColor!, context!)
     }
     useEffect(() => {
         if(suggestion){
-            setContext(suggestion!)
+            setContext(suggestion)
         }
-    } , [suggestion]);
+    } , []);
     return(
        <div className="w-full ">
            <form onSubmit={askColorRecommendationToAi} className="w-full flex flex-col gap-6 lg:flex-row  justify-center items-center">

@@ -20,14 +20,12 @@ export interface CompatibleColor {
     description?: string;
 }
 interface IColorContext {
-    context: string;
     isLoading: boolean;
     error: string | null;
     recommendation: IRecommendation | null;
     visions: IColorVisionSimulation | null
-    askColorRecommendation: (color: string) => Promise<void>
+    askColorRecommendation: (color: string, context: string) => Promise<void>
     askVisionDeficiency: (color: string) => Promise<void>
-    setContext: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export interface IVisionDeficiency {
@@ -53,13 +51,12 @@ const initialContext = {
 export const RecommendationContext = createContext<IColorContext>({} as IColorContext);
 
 export const ColorRecommendationProvider= ({ children }: { children: React.ReactNode}) => {
-    const [context, setContext] = useState<string>(initialContext.context);
     const [isLoading, setIsLoading] = useState<boolean>(initialContext.isLoading);
     const [error, setError] = useState<string | null>(initialContext.error);
     const [recommendation, setRecommendation] = useState<IRecommendation | null>(initialContext.recommendation);
     const [vision, setVision] = useState<IColorVisionSimulation | null>(initialContext.visions);
     const {selectedColor} = useColorContext();
-    const askColorRecommendationToAi = async (color: string) => {
+    const askColorRecommendationToAi = async (color: string, context: string) => {
         setIsLoading(true);
         setError(null);
         console.log(color)
@@ -113,14 +110,12 @@ export const ColorRecommendationProvider= ({ children }: { children: React.React
     return (
         <RecommendationContext.Provider
             value={{
-                context,
                 isLoading,
                 error,
                 recommendation,
                 visions: vision,
                 askColorRecommendation: askColorRecommendationToAi,
                 askVisionDeficiency: askiVisionDeficiency,
-                setContext
             }}
         >
             {children}
