@@ -16,7 +16,7 @@ export default function ColorRecommendationResult() {
                         className="text-black p-6 bg-white shadow rounded-lg "
                     >
                         <RecommendationHeader code={recommendation.selectedColor.code} name={recommendation.selectedColor.name}  colors={recommendation.compatibleColors}/>
-                        <p className="text-2xl mb-4"> <span  className="font-bold">Context: </span>:  {recommendation?.context}</p>
+                        <p className="text-2xl mb-4 py-6" > <span  className="font-bold">Context: </span>:  {recommendation?.context}</p>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                             {
                                 recommendation?.compatibleColors?.map((color: CompatibleColor) => (
