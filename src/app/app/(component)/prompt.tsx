@@ -22,7 +22,7 @@ export default function Prompt() {
     } , [suggestion]);
     return(
        <div className="w-full ">
-           <form onSubmit={askColorRecommendationToAi} className="w-full flex flex-col gap-3 lg:flex-row justify-center items-center">
+           <form onSubmit={askColorRecommendationToAi} className="w-full flex flex-col gap-6 lg:flex-row  justify-center items-center">
                <textarea
                    value={context}
                    minLength={1}
@@ -43,7 +43,6 @@ export default function Prompt() {
                </span>
                </button>
            </form>
-
        </div>
     )
 }

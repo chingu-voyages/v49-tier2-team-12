@@ -1,4 +1,4 @@
-import React , {useState} from 'react';
+import React , {useEffect , useState} from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import {SelectedColor} from "@/app/_components/prompt_wrapper";
 
@@ -7,8 +7,16 @@ interface ColorPaletteProps {
     colors: SelectedColor[]
 }
 
-const ColorPalette: React.FC<ColorPaletteProps> = ({ colors }) => {
+const ColorPalette = ({ colors }: ColorPaletteProps) => {
     const [copy, setCopy] = useState<boolean>(false)
+    const colorsJson = colors.map(color => ({
+        code: color.code,
+        name: color.name
+        })
+    )
+    useEffect(() => {
+        setCopy(false)
+    } , []);
     return (
         <div className="flex flex-wrap gap-4 p-4 bg-white shadow rounded-lg" >
             {colors.map((color, index) => (
@@ -21,7 +29,7 @@ const ColorPalette: React.FC<ColorPaletteProps> = ({ colors }) => {
             ))}
             <div className="flex items-center justify-center">
                 <CopyToClipboard
-                    text={JSON.stringify(colors)}
+                    text={JSON.stringify(colorsJson)}
                     onCopy={() => setCopy(true)}
                 >
                     {

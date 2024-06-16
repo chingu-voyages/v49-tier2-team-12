@@ -11,6 +11,7 @@ export interface IRecommendation {
 export interface SelectedColor {
     name: string;
     code: string;
+    description?: string
 }
 
 export interface CompatibleColor {
@@ -23,15 +24,29 @@ interface IColorContext {
     isLoading: boolean;
     error: string | null;
     recommendation: IRecommendation | null;
+    visions: IColorVisionSimulation | null
     askColorRecommendation: (color: string) => Promise<void>
+    askVisionDeficiency: (color: string) => Promise<void>
     setContext: React.Dispatch<React.SetStateAction<string>>;
 }
 
+export interface IVisionDeficiency {
+    type: string;
+    name: string;
+    code: string;
+    description?: string;
+}
+
+export interface IColorVisionSimulation {
+    normalVision: SelectedColor;
+    visionDeficiencies: IVisionDeficiency[];
+}
 const initialContext = {
     context: '',
     isLoading: false,
     error: null,
     recommendation: null,
+    visions: null
 
 };
 
@@ -42,6 +57,7 @@ export const ColorRecommendationProvider= ({ children }: { children: React.React
     const [isLoading, setIsLoading] = useState<boolean>(initialContext.isLoading);
     const [error, setError] = useState<string | null>(initialContext.error);
     const [recommendation, setRecommendation] = useState<IRecommendation | null>(initialContext.recommendation);
+    const [vision, setVision] = useState<IColorVisionSimulation | null>(initialContext.visions);
     const {selectedColor} = useColorContext();
     const askColorRecommendationToAi = async (color: string) => {
         setIsLoading(true);
@@ -69,6 +85,31 @@ export const ColorRecommendationProvider= ({ children }: { children: React.React
             setIsLoading(false);
         }
     }
+    const askiVisionDeficiency = async (color: string) => {
+        setIsLoading(true);
+        setError(null);
+        try {
+            const response = await fetch('/api/chat-color-vision', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ colorHex: color})
+            });
+
+            if (!response.ok) {
+                throw new Error("Failed to fetch color vision simulation");
+            }
+
+            const data = await response.json();
+            const parsedData: IColorVisionSimulation = JSON.parse(data.data.message.content);
+            setVision(parsedData);
+        } catch (error: any) {
+            setError(error.message);
+        } finally {
+            setIsLoading(false);
+        }
+    };
     return (
         <RecommendationContext.Provider
             value={{
@@ -76,7 +117,9 @@ export const ColorRecommendationProvider= ({ children }: { children: React.React
                 isLoading,
                 error,
                 recommendation,
+                visions: vision,
                 askColorRecommendation: askColorRecommendationToAi,
+                askVisionDeficiency: askiVisionDeficiency,
                 setContext
             }}
         >

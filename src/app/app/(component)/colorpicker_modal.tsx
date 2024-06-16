@@ -35,9 +35,9 @@ export default function ColorChoose() {
         setModal(true)
     }
     return(
-        <div className="">
+        <div className="w-full md:w-fit">
             <button onClick={handleOnOpenModal}>
-                <div className="w-12 h-12" style={{ backgroundColor: selectedColor ? selectedColor : "black" }} />
+                <div className="w-52 h-12  rounded-md" style={{ backgroundColor: selectedColor ? selectedColor : "black" }} />
             </button>
             <Modal shouldShowModal={modal} handleOnCLoseModal={handleOnCloseModal}>
                 <ColorPicker />
