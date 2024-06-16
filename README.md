@@ -19,7 +19,7 @@
 - [Our Team](#our-team)
 
 ## Project Description
-ColorMind is a web application that helps users receive color recommendations based on a context. Users pick a color and write the context, explaining how they want to use it. They get an AI response with compatible color and recommendations. They can also simulate how the selected color might look like for people with vision deficiencies. 
+ColorMind is a web application that helps users receive color recommendations based on a context. Users pick a color and write the context, explaining how they want to use it. They get an AI response with compatible colors and recommendations. They can also simulate how the selected color might look like for people with vision deficiencies. 
 
 ## Built With
 <div align="center">
@@ -48,7 +48,7 @@ Clone the repository to your local machine. </br>
 Run <i>npm install</i> in the terminal for the necessary dependencies. </br>
 Install <i>@jaames/iro</i> for the color picker, <i>openai</i> for AI connectivity. </br>
 Create a local .env file at the root level of the project and add the API key you receive from OpenAI (you have to create an account first):
- - OPENAI_API_KEY from [OpenAI](https://platform.openai.com/playground) </br>
+OPENAI_API_KEY from [OpenAI](https://platform.openai.com/playground) </br>
 Run <i>npm run dev</i> in the terminal. </br>
 Check the app at the indicated local link (ex: http://localhost:3000).
 

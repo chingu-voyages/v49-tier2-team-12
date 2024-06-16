@@ -67,24 +67,24 @@ export default function ColorVisionSimulator() {
             </div>
 
             {simulation ? (
-                <div className="w-full text-black hover:text-slate-400 p-6 border  box-shadow rounded-lg ">
-                    <h1 className="text-2xl font-bold mb-2 __className_f8e921">Normal Vision:</h1>
+                <div className="w-full text-black p-6 border  box-shadow rounded-lg transform transition-transform hover:-translate-y-0.5 hover:-translate-x-0.5">
+                    <h1 className="text-2xl text-gray-700 font-bold mb-2 __className_f8e921">Normal Vision:</h1>
                     <div className="flex items-center mb-4">
                         <div className="w-12 h-12 rounded-full mr-3" style={{ backgroundColor: simulation?.normalVision?.code }}></div>
                         <div>
                             <p className="text-sm text-gray-500 mt-1">{simulation?.normalVision?.description}</p>
                         </div>
                     </div>
-                    <h2 className="text-2xl font-bold mb-2 __className_f8e921">Vision Deficiencies:</h2>
+                    <h2 className="text-2xl text-gray-700 font-bold mb-2 __className_f8e921">Vision Deficiencies:</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {simulation?.visionDeficiencies?.map((deficiency: IVisionDeficiency, index: number) => (
-                            <div key={`${deficiency.code}-${index}`} className="flex flex-col items-center p-3 border border-gray-200 rounded-md  box-shadow">
+                            <div key={`${deficiency.code}-${index}`} className="flex flex-col items-center p-5 border border-gray-200 rounded-md  box-shadow transform transition-transform hover:-translate-y-0.5 hover:-translate-x-0.5">
                                 <div className="text-center">
-                                    <p className="text-lg font-medium mb-2 __className_f8e921">{deficiency.type}</p>
+                                    <p className="text-lg text-gray-700 font-medium mb-2 __className_f8e921">{deficiency.type}</p>
                                 </div>
                                 <div className="w-full h-16 rounded-md mb-2" style={{ backgroundColor: deficiency.code }}></div>
                                 <div className="text-center">
-                                    <p className="text-lg font-medium">{deficiency.name}</p>
+                                    <p className="text-xl font-medium">{deficiency.name}</p>
                                     <p className="text-sm text-gray-600 uppercase">{deficiency.code}</p>
                                     {deficiency.description && <p className="text-sm text-gray-500 mt-1">{deficiency.description}</p>}
                                 </div>
@@ -93,7 +93,7 @@ export default function ColorVisionSimulator() {
                     </div>
                 </div>
             ) : (
-                <div className="flex-1 min-h-80 p-3 bg-white text-sm text-gray-400 hover:text-slate-400 border box-shadow rounded-lg ">
+                <div className="flex-1 min-h-80 p-3 bg-white text-sm text-gray-400 hover:text-slate-400 border box-shadow rounded-lg transform transition-transform hover:-translate-y-0.5 hover:-translate-x-0.5">
                     Simulation results will be displayed here.
                 </div>
             )}
