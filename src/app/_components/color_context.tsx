@@ -18,7 +18,7 @@ export default function ColorContextProvider({
                                              }
 
 ){
-    const [ selectedColor, SetSelectedColor ] = useState<string| null>("#C0C0C0" );
+    const [ selectedColor, SetSelectedColor ] = useState<string| null>("#c09d00" );
     const handleColorSelection = (value : string) => {
         SetSelectedColor(value)
     }
