@@ -15,6 +15,7 @@ const Header: React.FC = () => {
         setIsMenuOpen(!isMenuOpen);
     };
     const  pathname = usePathname();
+    console.log(pathname)
     return (
         <nav className="w-full z-50 backdrop-blur shadow-sm text-gray-800 border-b-1">
             <div className=" max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -53,15 +54,31 @@ const Header: React.FC = () => {
                     id="navbar-default"
                 >
                     <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 ">
-                        <li>
-                            <a
-                                href="#"
-                                className="block py-2 px-3 rounded hover:text-cyan-300"
-                                aria-current="page"
-                            >
-                               About Us
-                            </a>
-                        </li>
+                        {
+                            pathname !='/' && (
+                                <div className="flex">
+                                    <li>
+                                        <Link
+                                            href="/app"
+                                            className={`${pathname === "/app" ? "text-blue-600 border-b-2 border-blue-500 ": ""} block py-2 px-3 hover:text-blue-600`}
+                                            aria-current="page"
+                                        >
+                                            Color recommendation
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            href="/app/color-vision"
+                                            className={`${pathname == "/app/color-vision" ? "text-blue-600 border-b-2 border-blue-500": ""} block py-2 px-3 rounded hover:text-blue-600`}
+                                            aria-current="page"
+                                        >
+                                            Color vision
+                                        </Link>
+                                    </li>
+                                </div>
+
+                            )
+                        }
                         {
                             pathname == "/" && (
                                 <Link href={"/app"} >

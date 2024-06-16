@@ -11,7 +11,7 @@ export default function ColorChoose() {
     const handleOnCloseModal = () => {
         setModal(false);
     }
-    const handleOutsideClick = (event: MouseEvent) => {
+    const handleOutsideClick = (event: MouseEvent | TouchEvent) => {
         const target = event.target as HTMLElement;
         if (target.classList.contains('modal')) {
            setModal(false)
@@ -21,11 +21,14 @@ export default function ColorChoose() {
     React.useEffect(() => {
         if (modal) {
             document.addEventListener('mousedown', handleOutsideClick);
+            document.addEventListener('touchstart', handleOutsideClick);
         } else {
             document.removeEventListener('mousedown', handleOutsideClick);
+            document.addEventListener('touchstart', handleOutsideClick);
         }
         return () => {
             document.removeEventListener('mousedown', handleOutsideClick);
+            document.removeEventListener('touchstart', handleOutsideClick);
         };
     }, [modal]);
     const handleOnOpenModal = () => {
