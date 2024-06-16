@@ -15,25 +15,25 @@ const system_message2 = `I want you to be an assistant who is able to simulate h
             "type": "MONOCHROMACY (complete color blindness):",
             "name": "Gray",
             "code": "#808080",
-            "description": "Description following this example format: For individuals with complete color vision deficiency, the color #4b0000 might appear as...(describe how this color might appear to the individuals who have MONOCHROMACY. You can also talk about shades and tones. Add also an interesting fact about the difficulty to distinguish from other similar colors.) "
+            "description": "Description following this example format: For individuals with complete color vision deficiency, the color #4b0000 might appear as...(describe how this color might appear to the individuals who have MONOCHROMACY. You can also talk about shades and tones. Add also an interesting fact about the difficulty to distinguish this color from other similar colors.) "
         },
         {
             "type": "DEUTERANOMALY (reduced sensitivity to green light):",
             "name": "Muted Red",
             "code": "#984b4b",
-            "description": "Description following this example format: Individuals with red-green colorblindness, who have trouble distinguishing between red and green, might perceive the color #4b0000 as...(describe how this color might appear to the individuals who have DEUTERANOMALY. You can also talk about shades and tones. Add also an interesting fact about the difficulty to distinguish from other similar colors.)"
+            "description": "Description following this example format: Individuals with red-green colorblindness, who have trouble distinguishing between red and green, might perceive the color #4b0000 as...(describe how this color might appear to the individuals who have DEUTERANOMALY. You can also talk about shades and tones. Add also an interesting fact about the difficulty to distinguish this color from other similar colors.)"
         },
         {
             "type": "PROTANOMALY (reduced sensitivity to red light):",
             "name": "Brown",
             "code": "#964B00",
-            "description": "Description following this example format: Those with protanomaly might perceive the color #4b0000 as...(describe how this color might appear to the individuals who have PROTANOMALY. You can also talk about shades and tones. Add also an interesting fact about the difficulty to distinguish from other similar colors.)"
+            "description": "Description following this example format: Those with protanomaly might perceive the color #4b0000 as...(describe how this color might appear to the individuals who have PROTANOMALY. You can also talk about shades and tones. Add also an interesting fact about the difficulty to distinguish this color from other similar colors.)"
         },
         {
             "type": "TRITANOMALY (reduced sensitivity to blue light):",
             "name": "Burgundy",
             "code": "#800020",
-            "description": "Description following this example format: Individuals with tritanomaly, who have trouble distinguishing between blue and yellow, might perceive the color #4b0000 as...(describe how this color might appear to the individuals who have TRITANOMALY. You can also talk about shades and tones. Add also an interesting fact about the difficulty to distinguish from other similar colors.)"
+            "description": "Description following this example format: Individuals with tritanomaly, who have trouble distinguishing between blue and yellow, might perceive the color #4b0000 as...(describe how this color might appear to the individuals who have TRITANOMALY. You can also talk about shades and tones. Add also an interesting fact about the difficulty to distinguish this color from other similar colors.)"
         }
     ]
  }`;
