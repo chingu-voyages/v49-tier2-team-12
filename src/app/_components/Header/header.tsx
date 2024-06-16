@@ -2,6 +2,10 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Logo from "../../../../public/Logo.png"
+import Link from "next/link";
+import {neueRemanGt} from "@/app/fonts/font";
+import {Button} from "@/app/_components/Buttons/Buttons";
+import {Pen} from "@/app/_components/icons/pen";
 
 const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,11 +15,12 @@ const Header: React.FC = () => {
     };
 
     return (
-        <nav className="border-gray-200 bg-gray-800">
-            <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <a href="" className="flex items-center space-x-3 rtl:space-x-reverse">
-                    <Image src={Logo} alt="Logo" style={{ width: '100px', height: '100px' }} />
-                </a>
+        <nav className="w-full z-50 backdrop-blur shadow-sm text-gray-800 border-b-1">
+            <div className=" max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+                    <Image src={Logo} alt="Logo" style={{ width: '50px', height: '50px' }} />
+                    <h2 className={`${neueRemanGt.className} text-xl`}>ColorMind</h2>
+                </Link>
                 <button
                     data-collapse-toggle="navbar-default"
                     type="button"
@@ -47,23 +52,14 @@ const Header: React.FC = () => {
                     id="navbar-default"
                 >
                     <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 ">
-                        <li>
-                            <a
-                                href="#"
-                                className="block py-2 px-3 text-white rounded hover:text-cyan-300"
-                                aria-current="page"
-                            >
-                                Color Picker
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="#"
-                                className="block py-2 px-3 text-white hover:text-cyan-300 rounded "
-                            >
-                                AI Search
-                            </a>
-                        </li>
+                        <Link href={"/explore"} >
+                            <Button label="Ai Color Generator" style="px-6 flex items-center justify-center gap-2 __className_a82057" >
+                                <span className="w-5 text-white ">
+                                     <Pen />
+                                </span>
+                            </Button>
+                        </Link>
+
                     </ul>
                 </div>
             </div>

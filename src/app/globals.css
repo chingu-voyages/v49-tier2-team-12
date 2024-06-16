@@ -20,3 +20,28 @@ body {
   color: rgb(var(--foreground-rgb));
  
 }
+
+@layer base {
+
+
+  ::-webkit-scrollbar {
+    @apply h-3 w-3;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-50;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-lg border-2 border-solid  bg-scrollbar-thumb hover:bg-scrollbar-thumb-hover;
+  }
+
+}
+
+.bg-color-2 {background: #f8feec;}
+.box-shadow {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(171,171,171,1);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(171,171,171,1);
+  box-shadow: 0px 0px 10px 0px rgba(171,171,171,1);
+}
+.min-h-80vh {min-height: 80vh;}
