@@ -10,7 +10,7 @@ export default function Home() {
     console.log("selected color: ",handleColorChange);
   }
   return (
-    <section className="w-full flex justify-center items-start pt-24  min-h-80vh">
+    <section className="w-full flex justify-center items-start pt-12  min-h-80vh">
         <HeroSection/>
     </section>
   );
