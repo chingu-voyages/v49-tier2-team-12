@@ -24,7 +24,7 @@ export default function ColorChoose() {
             document.addEventListener('touchstart', handleOutsideClick);
         } else {
             document.removeEventListener('mousedown', handleOutsideClick);
-            document.addEventListener('touchstart', handleOutsideClick);
+            document.removeEventListener('touchstart', handleOutsideClick);
         }
         return () => {
             document.removeEventListener('mousedown', handleOutsideClick);
