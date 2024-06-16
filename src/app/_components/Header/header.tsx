@@ -64,7 +64,7 @@ const Header: React.FC = () => {
                         </li>
                         {
                             pathname == "/" && (
-                                <Link href={"/explore"} >
+                                <Link href={"/app"} >
                                     <Button label="Ai Color Generator" style="px-6 flex items-center justify-center gap-2 __className_a82057" >
                                 <span className="w-5 text-white ">
                                      <Pen />

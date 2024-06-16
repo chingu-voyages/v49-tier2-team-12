@@ -1,8 +1,7 @@
 import React , {useState} from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { FaClipboard } from 'react-icons/fa';
 import {SelectedColor} from "@/app/_components/prompt_wrapper";
-import {CgClipboard} from "react-icons/cg";
+
 
 interface ColorPaletteProps {
     colors: SelectedColor[]
