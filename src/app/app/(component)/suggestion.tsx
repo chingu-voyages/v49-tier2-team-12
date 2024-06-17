@@ -45,12 +45,12 @@ export default function Suggestion() {
                     </h3>
                 </div>
                 <button onClick={toggleShow}>
-                    { !show ? "Hide" : "Show"}
+                    { !show ? "Show" : "Hide"}
                 </button>
             </div>
             <div className="flex flex-wrap md:grid md:grid-cols-2 gap-3">
                 {
-                    show || !isLoading && suggestions.map(suggestion => {
+                    show && suggestions.map(suggestion => {
                         return(
                             <SuggestionCard
                                 key={suggestion.context}
