@@ -6,6 +6,7 @@ import Link from "next/link";
 import {neueRemanGt} from "@/app/fonts/font";
 import {Button} from "@/app/_components/Buttons/Buttons";
 import {Pen} from "@/app/_components/icons/pen";
+import {usePathname} from "next/navigation";
 
 const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,7 +14,8 @@ const Header: React.FC = () => {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-
+    const  pathname = usePathname();
+    console.log(pathname)
     return (
         <nav className="w-full z-50 backdrop-blur shadow-sm text-gray-800 border-b-1">
             <div className=" max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -52,14 +54,42 @@ const Header: React.FC = () => {
                     id="navbar-default"
                 >
                     <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 ">
-                        <Link href={"/explore"} >
-                            <Button label="Ai Color Generator" style="px-6 flex items-center justify-center gap-2 __className_a82057" >
+                        {
+                            pathname !='/' && (
+                                <div className="flex">
+                                    <li>
+                                        <Link
+                                            href="/app"
+                                            className={`${pathname === "/app" ? "text-blue-600 border-b-2 border-blue-500 ": ""} block py-2 px-3 hover:text-blue-600`}
+                                            aria-current="page"
+                                        >
+                                            Color recommendation
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            href="/app/color-vision"
+                                            className={`${pathname == "/app/color-vision" ? "text-blue-600 border-b-2 border-blue-500": ""} block py-2 px-3 rounded hover:text-blue-600`}
+                                            aria-current="page"
+                                        >
+                                            Color vision
+                                        </Link>
+                                    </li>
+                                </div>
+
+                            )
+                        }
+                        {
+                            pathname == "/" && (
+                                <Link href={"/app"} >
+                                    <Button label="Ai Color Generator" style="px-6 flex items-center justify-center gap-2 __className_a82057" >
                                 <span className="w-5 text-white ">
                                      <Pen />
                                 </span>
-                            </Button>
-                        </Link>
-
+                                    </Button>
+                                </Link>
+                            )
+                        }
                     </ul>
                 </div>
             </div>
