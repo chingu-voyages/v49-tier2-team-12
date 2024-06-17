@@ -22,14 +22,12 @@ export default function RootLayout({
             <header className="fixed w-full z-20">
               <Header/>
             </header>
-            <main>
+            <main className="py-20">
               {children}
             </main>
             <footer>
               <Footer />
             </footer>
-
-
       </body>
     </html>
   );
