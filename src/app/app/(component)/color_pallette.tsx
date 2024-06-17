@@ -33,7 +33,6 @@ const ColorPalette = ({ colors }: ColorPaletteProps) => {
                     onCopy={() => {
                         setCopy(true)
                     }}
-
                 >
                     {
                         copy ? (
